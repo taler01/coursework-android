@@ -1,4 +1,7 @@
-package com.example.two;
+package com.example.network;
+
+import android.widget.TextView;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,20 +26,26 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        TextView txt3=(TextView)findViewById(R.id.myTestView2);
+        TextView txt3=(TextView)findViewById(R.id.myTestView5);
 
         Bundle bundle=this.getIntent().getExtras();
 
         String str = bundle.getString("text");
-        txt3.setText("签到成功");
+        txt3.setText(str);
         btn2=(Button)findViewById(R.id.myButton2);
         btn2.setOnClickListener(new btnclock2());
     }
     class btnclock2 implements OnClickListener{
-      public void onClick(View v){
-          Intent intent2=new Intent();
-          intent2.setClass(SecondActivity.this, MainActivity.class);
-          startActivityForResult(intent2, 0);
-      }
+        public void onClick(View v){
+            Intent intent2=new Intent();
+            intent2.setClass(SecondActivity.this, MainActivity.class);
+            startActivityForResult(intent2, 0);
+        }
     }
 }
+
+//public class SecondActivity {
+
+
+//}
+
