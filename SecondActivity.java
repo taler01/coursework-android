@@ -27,11 +27,22 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         TextView txt3=(TextView)findViewById(R.id.myTestView5);
+        TextView txt4=(TextView)findViewById(R.id.myTestView6);
+        TextView txt5=(TextView)findViewById(R.id.myTestView7);
+        TextView txt6=(TextView)findViewById(R.id.myTestView8);
 
         Bundle bundle=this.getIntent().getExtras();
 
-        String str = bundle.getString("text");
-        txt3.setText(str);
+        String str1 = bundle.getString("text1");
+        String str2 = bundle.getString("text2");
+        String str3 = bundle.getString("text3");
+        int str4 = bundle.getInt("text4");
+
+        txt3.setText(str1);
+        txt4.setText(str2);
+        txt5.setText(str3);
+        txt6.setText(str4);
+
         btn2=(Button)findViewById(R.id.myButton2);
         btn2.setOnClickListener(new btnclock2());
     }
@@ -48,4 +59,5 @@ public class SecondActivity extends AppCompatActivity {
 
 
 //}
+
 
